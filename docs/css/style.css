@@ -3,7 +3,8 @@
 
 html, body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
   margin: 0;
@@ -20,6 +21,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-attachment: fixed;
 }
 
 h1,
@@ -39,39 +41,38 @@ a:hover {
 }
 
 #container {
-  padding: 1%;
+  padding: 2%;
   margin: 1.5rem;
   max-width: 1200px;
   background-color: rgba(250, 250, 255, 0.95);
   box-sizing: border-box;
+  border-radius: 6px;
 }
 
 #header {
-  /* padding: 1%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  gap: 1rem;
+  padding-top: 20px;
 }
 
-#logo {
+#header #logo {
   width: 200px;
 }
 
+#header h1 {
+  margin: 0;
+  padding: 1rem;
+}
+
 .infoblock {
-  padding: 1.5%;
+  padding: max(1.5%, 1rem);
   box-sizing: border-box;
   height: 100%;
-}
-
-@media screen and (min-width: 740px) {
-  .infoblock {
-    float: left;
-    width: calc(100% / 2);
-  }
-}
-
-@media screen and (max-width: 739px) {
-  .infoblock {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 #footer {
@@ -79,4 +80,19 @@ a:hover {
   text-align: center;
   font-size: 75%;
   padding: 0.5%;
+}
+
+@media screen and (min-width: 740px) {
+  body {
+    justify-content: center;
+  }
+
+  #header {
+    flex-direction: row;
+  }
+
+  .infoblock {
+    float: left;
+    width: calc(100% / 2);
+  }
 }
