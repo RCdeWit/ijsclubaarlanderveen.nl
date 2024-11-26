@@ -10,7 +10,7 @@ html, body {
   margin: 0;
 
   font-family: "Krub", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   color: #111;
   line-height: 1.6;
 }
@@ -37,7 +37,21 @@ a {
 }
 
 a:hover {
-  color: #999;
+  color: #0055ff;
+}
+
+span.address-line {
+  display: block;
+}
+
+span.address-line#name {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+span#coc {
+  display: block;
+  margin-top: 1rem;
 }
 
 #container {
